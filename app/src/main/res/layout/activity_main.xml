@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocationActivity">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/map"
+              tools:context=".LocationActivity"
+              android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_with_shadow"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Select this location"/>
+
+        <Button
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/selectLocation"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a location"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dummy"
+        android:layout_centerInParent="true"
+        android:layout_width="1dp"
+        android:layout_height="1dp"/>
+    <ImageView
+        android:src="@mipmap/picker"
+        android:layout_alignBottom="@id/dummy"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
