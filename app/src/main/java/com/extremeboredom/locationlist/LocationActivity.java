@@ -227,7 +227,7 @@ public class LocationActivity extends FragmentActivity implements OnMapReadyCall
         LinearLayout customView = (LinearLayout) show.getCustomView();
         final TextInputEditText landmark = (TextInputEditText) customView.findViewById(R.id.textview_landmark);
         final TextInputEditText phone = (TextInputEditText) customView.findViewById(R.id.textview_phone);
-        if(details == null){
+        if(details.getId() == -1){
             save.setEnabled(false);
         }
         else{
