@@ -38,7 +38,7 @@ public class ListActivity extends AppCompatActivity {
         realm = Realm.getDefaultInstance();
         RealmResults<LocationItem> toDoItems = realm
                 .where(LocationItem.class)
-                .findAllSorted("id", Sort.ASCENDING);
+                .findAllSorted("id", Sort.DESCENDING);
         locationRealmAdapter = new LocationRealmAdapter(this, toDoItems, true, true, this);
         realmRecyclerView.setAdapter(locationRealmAdapter);
     }
